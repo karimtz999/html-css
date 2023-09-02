@@ -1,0 +1,32 @@
+/* declare border box sizing so the borders placed on elements doesn't disrupt our layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* by placing a font family and size on the body element, all other elements inherit this style, leading to uniform page styling that's easily overridden as needed */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+/* selects the UL that is an adjacent sibling of a paragraph */
+p + ul {
+  border: 2px dotted blue;
+  background-color: #eeeeff;
+}
+ol {
+  border: 1px solid green;
+  margin: 2rem auto;
+  background-color: #eeffee;
+}
+.nested {
+  border: 5px double red;
+  background-color: #ffeeee;
+}
+/* override the earlier OL and UL styles */
+.nested ol,
+.nested ul {
+  border: none;
+  margin: 0;
+  background-color: transparent;
+}
